@@ -15,6 +15,20 @@ Container Path: /tmp/xteve <> /tmp/xteve/ \
 Container Path: /TVH <> /mnt/user/appdata/tvheadend/data/ << not needed if no TVHeadend is used \
 while /mnt/user/appdata/ should fit to your system path ...
 
+```
+docker run -d \
+  --name=xteve \
+  --net=bridge \
+  --log-opt max-size=10m \
+  --log-opt max-file=3 \
+  -e TZ="Europe/Berlin" \
+  -v /mnt/user/appdata/xteve/:/root/.xteve:rw \
+  -v /mnt/user/appdata/xteve/_config:/config:rw \
+  -v /tmp/xteve/:/tmp/xteve:rw \
+  -v /mnt/user/appdata/tvheadend/data/:/TVH \
+  alturismo/xteve
+```
+
 to test the cronjob functions \
 docker exec -it "dockername" ./config/cronjob.sh
 
