@@ -39,5 +39,6 @@ website: http://xteve.de \
 Discord: https://discordapp.com/channels/465222357754314767/465222357754314773
 
 some small script lines cause i personally use tvheadend and get playlist for xteve and cp xml data to tvheadend
+added now grab xmltv from tvheadend as source for xteve
 
 so, credits to the programmers, i just putted this together in a docker to fit my needs
