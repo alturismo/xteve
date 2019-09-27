@@ -21,6 +21,11 @@ VOLUME /config
 VOLUME /root/.xteve
 VOLUME /tmp/xteve
 
+# Add ffmpeg and vlc
+RUN apk add ffmpeg
+RUN apk add vlc
+RUN sed -i 's/geteuid/getppid/' /usr/bin/vlc
+
 # Add xTeve and guide2go
 RUN wget https://github.com/xteve-project/xTeVe-Downloads/raw/master/xteve_linux_amd64.zip -O temp.zip; unzip temp.zip -d /usr/bin/; rm temp.zip
 #ADD xteve /usr/bin/xteve
