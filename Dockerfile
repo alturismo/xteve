@@ -28,7 +28,6 @@ RUN sed -i 's/geteuid/getppid/' /usr/bin/vlc
 
 # Add xTeve and guide2go
 RUN wget https://github.com/xteve-project/xTeVe-Downloads/raw/master/xteve_linux_amd64.zip -O temp.zip; unzip temp.zip -d /usr/bin/; rm temp.zip
-#ADD xteve /usr/bin/xteve
 ADD cronjob.sh /
 ADD entrypoint.sh /
 ADD sample_cron.txt /
