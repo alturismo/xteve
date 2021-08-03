@@ -41,6 +41,7 @@ Discord: https://discordapp.com/channels/465222357754314767/465222357754314773
 some small script lines cause i personally use tvheadend and get playlist for xteve and cp xml data to tvheadend
 added now grab xmltv from tvheadend as source for xteve
 
-added rewrite function for reverse proxy usage for xml to get icon links working, see cronjob.sh
+added rewrite function for reverse proxy usage for xml to get icon links working,#
+see cronjob.sh
 
 so, credits to the programmers, i just putted this together in a docker to fit my needs
